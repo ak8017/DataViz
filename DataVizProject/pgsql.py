@@ -14,7 +14,9 @@ import os
 
 
 DATABASE_URL = os.environ.get(
-    'DATABASE_URL', '') or "your database connection string"
+    'DATABASE_URL', '') or "postgres://yaqfsxtfrvpnqw:0d59a3e541dd796adf2ef1fbf31c2c0d84c46c59d966db0990cd026ca01894d6@ec2-184-72-235-80.compute-1.amazonaws.com:5432/dbftqqmnch7b9g"
+
+print(DATABASE_URL)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 db = SQLAlchemy(app)
 
